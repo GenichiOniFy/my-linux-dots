@@ -29,7 +29,10 @@ return
                 capabilities = capabilities;
             })
             lspconfig.hyprls.setup({
-                capabilities = capabilities
+                capabilities = capabilities;
+                cmd = {"hyprls", "--stdio"};
+                filetypes = { 'hyprlang' };
+                single_file_support = true;
             })
             lspconfig.harper_ls.setup({
                 capabilities = capabilities
